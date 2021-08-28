@@ -13,6 +13,15 @@ DAYS = (
 	('SAT','Saturday'),
 	('SUN','Sunday'),
 )
+LANGUAGES=(
+	('en','English'),
+	('hi','Hindi'),
+	('gu','Gujarati'),
+	('zh','Chinese'),
+	('ja','Japanese'),
+	('fr','French'),
+	('de','German'),	
+)
 class District(models.Model):
 	distID = models.IntegerField(primary_key = True)
 	distName = models.CharField(max_length=10)
@@ -41,6 +50,12 @@ class Contact(models.Model):
 	contactNo = models.CharField(max_length=13)
 	class Meta:
 		unique_together = ['docID', 'contactNo']
+
+class Language(models.Model):
+	docID = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+	langCode = models.CharField(max_length=2, choices=LANGUAGES)
+	class Meta:
+		unique_together = ['docID', 'langCode']		
 		
 class Availability(models.Model):
 	docID = models.ForeignKey(Doctor, on_delete=models.CASCADE)
