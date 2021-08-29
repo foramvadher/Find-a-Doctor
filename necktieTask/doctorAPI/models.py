@@ -42,8 +42,8 @@ class Doctor(models.Model):
 	addr = models.CharField(max_length=50)
 	dist = models.ForeignKey(District, on_delete=models.CASCADE)
 	price = models.IntegerField()
-	priceRemarks = models.CharField(max_length=30)
-	holidayRemarks = models.CharField(max_length=20)
+	priceRemarks = models.CharField(max_length=50)
+	holidayRemarks = models.CharField(max_length=50)
 	
 class Contact(models.Model):
 	docID = models.ForeignKey(Doctor, on_delete=models.CASCADE)
