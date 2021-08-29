@@ -1,5 +1,6 @@
 # Find-a-Doctor
 This is a task for a company which required a backend for saving and retrival of Doctor's data according to search.
+I found it really challenging for me to learn Django and implement the task, it was fun though lets get started.
 
 ## Step 1 : Set up Django
 
