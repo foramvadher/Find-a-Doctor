@@ -142,6 +142,7 @@ Try testing following urls:
   http://localhost:8000/doctor/
   
   Post format
+  ```json script
   [
     {
         "docID": 1,
@@ -178,5 +179,7 @@ Try testing following urls:
             }
         ],
         "holidayRemarks": "no holiday"
-    },......................
-    ]
+    },
+    ......................
+  ]
+  ```
