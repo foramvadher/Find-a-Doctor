@@ -137,4 +137,46 @@ Try testing following urls:
   
   http://localhost/doctor?price=1500&lang=english&category=general  
   
+- Post one or many doctors
 
+  http://localhost:8000/doctor/
+  
+  Post format
+  [
+    {
+        "docID": 1,
+        "name": "test Doctor",
+        "specialization": {
+            "spName": "Obstetrics & Gynaecology"
+        },
+        "contacts": [
+            "1234567890"
+        ],
+        "eMail": "testemail@mail",
+        "qualification": "PHD",
+        "languages": [
+            "English",
+            "Chinese"
+        ],
+        "addr": "test address",
+        "dist": {
+            "distName": "Kwai Tsing",
+            "region": "NT"
+        },
+        "price": 1200,
+        "priceRemarks": "inclusive all taxes",
+        "availability": [
+            {
+                "day": "MON",
+                "startTime": "06:00:00",
+                "endTime": "18:00:00"
+            },
+            {
+                "day": "TUE",
+                "startTime": "06:00:00",
+                "endTime": "18:00:00"
+            }
+        ],
+        "holidayRemarks": "no holiday"
+    },......................
+    ]
